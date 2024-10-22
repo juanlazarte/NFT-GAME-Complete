@@ -1,66 +1,24 @@
-## Foundry
+# 🎮 NFT Game Project
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+Este proyecto es un juego NFT completo que incluye la creación y administración de tokens, venta pública, vault de recompensas y vesting. Utiliza tecnología blockchain para garantizar la seguridad y transparencia, integrando Chainlink para la generación de números aleatorios. Las pruebas del sistema fueron realizadas con Foundry para asegurar un código robusto y confiable.
 
-Foundry consists of:
+## 🛠️ Características
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+- **Contrato de Token**: Implementación de un contrato ERC20/721 que permite la emisión de tokens utilizados dentro del juego.
+- **Vault**: Sistema de vaults que gestiona las recompensas de los jugadores.
+- **Public Sale**: Contrato que facilita la venta pública de tokens del juego.
+- **Vesting**: Contrato que gestiona la liberación progresiva de los tokens adquiridos o recompensas a lo largo del tiempo.
+- **Integración con Chainlink**: Utilizado para la generación segura de números aleatorios, fundamentales para la mecánica del juego (ej. loot boxes, aleatorización de atributos).
+  
+## 🚀 Tecnologías Utilizadas
 
-## Documentation
+- **Solidity**: Lenguaje utilizado para los contratos inteligentes.
+- **Chainlink VRF**: Para generar números aleatorios de manera segura en la blockchain.
+- **Foundry**: Framework utilizado para escribir y ejecutar tests de contratos inteligentes.
+- **OpenZeppelin**: Biblioteca de contratos inteligentes para implementar estándares de ERC20/721 y características adicionales de seguridad.
 
-https://book.getfoundry.sh/
+## 📚 Documentación
 
-## Usage
+Cada contrato está documentado en el código para explicar las funciones y el propósito de cada módulo. Puedes revisar los comentarios inline en los archivos `.sol`.
 
-### Build
 
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
